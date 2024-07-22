@@ -1,0 +1,408 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Nunito;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+:root {
+    --bar-width: 30px;
+    --bar-height: 4px;
+    --ham-gap: 6px;
+    --ham-height: calc(var(--ham-gap) * 2 + var(--bar-height) * 3);
+    --bar-width: calc(var(--ham-height) * 1.41421356237);
+    --transition: 0.3s ease-in-out;
+}
+
+@keyframes load {
+    0% {
+        transform: translateX(20vw);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#delete_account {
+    background-color: red; 
+    color: whitesmoke; 
+    border: none; 
+    border-radius: 8px; 
+    padding: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#delete_account:hover {
+    transform: rotate(2deg);
+}
+
+.Input {
+    padding: 8px;
+    width: 100%;
+    background-color: #131588;
+    border: 2px solid rgb(148, 144, 182);
+    border-radius: 12px;
+    outline: none;
+    color: whitesmoke;
+    transition: all 0.5s ease-in-out;
+}
+
+.Input:focus {
+    border: 2px dashed rgb(148, 144, 182);
+}
+
+#registerFormBtn {
+    background-color: red; 
+    color: whitesmoke; 
+    border: none; 
+    border-radius: 8px; 
+    padding: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+
+#registerFormBtn:hover {
+    cursor: pointer;
+    transform: rotate(5deg);
+}
+
+#loginFormBtn {
+    background-color: #3b3edb; 
+    color: whitesmoke; 
+    border: none;
+    border-radius: 8px; 
+    padding: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+
+#loginFormBtn:hover {
+    cursor: pointer;
+    transform: rotate(5deg);
+}
+
+.flash-messages {
+    display: flex;
+    position: fixed;
+    left: 15px;
+    right: 15px;
+    top: calc(70px + 10px);
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: rgb(180, 136, 26);
+    color: whitesmoke;
+    height: max-content;
+    transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+    gap: 20px;
+    animation: load 0.35s ease-in-out 0s 1;
+    box-shadow: 0px 0px 5px 0px black;
+    z-index: 3;
+}
+
+.navItems {
+    color: whitesmoke;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    padding: 17px;
+    padding-top: 21.5px;
+    padding-bottom: 21.5px;
+    font-weight: 700;
+}
+
+.navItems:hover {
+    background-color: #243a938c;
+    padding: 20px;
+    padding-top: 24.5px;
+    padding-bottom: 24.5px;
+    color: lime;
+}
+
+#login {
+    padding: 20px;
+}
+
+#login:hover {
+    background-color: #243a938c;
+    padding: 23px;
+    padding-top: 24.5px;
+    padding-bottom: 24.5px;
+    color: lime;
+}
+
+#cart {
+    color: whitesmoke;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: 700;
+}
+
+#cart:hover {
+    background-color: #243a938c;
+    padding-left: 33px;
+    padding-right: 33px;
+    padding-top: 24.5px;
+    padding-bottom: 23px;
+    color: lime;
+}
+
+.ATC {
+    transition: all 0.3s ease-in-out; 
+    font-weight: 700; 
+    background-color: rgb(28, 192, 28); 
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    width: calc(100% - 40px); 
+    padding: 8px; 
+    border: none;
+    border-radius: 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: black;
+}
+
+.VC {
+    background-color: rgb(28, 192, 28); 
+    color: whitesmoke; 
+    border: none; 
+    border-radius: 8px; 
+    padding: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.Home {
+    background-color: blue; 
+    color: whitesmoke; 
+    border: none; 
+    border-radius: 8px; 
+    padding: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.ATC:hover {
+    cursor: pointer;
+    width: calc(100% - 50px);
+    rotate: 2deg;
+}
+
+.VC:hover {
+    transform: rotate(2deg);
+}
+
+.Home:hover {
+    transform: rotate(2deg);
+}
+
+.FB {
+    width: 200px;
+}
+
+.FB:hover {
+    width: 190px;
+    transform: rotate(2deg);
+    cursor: pointer;
+}
+
+.filterBtn {
+    display: none;
+}
+
+.hideFilterBtn {
+    display: none;
+}
+
+#dashboard {
+    margin-left: 270px;
+    transition: all 0.5s ease-in-out;
+}
+
+.ham-menu {
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: none;
+    width: 100%; 
+    height: 100%;
+}
+
+.ham {
+    display: flex;
+    flex-direction: column;
+}
+
+.ham:hover {
+    cursor: pointer;
+}
+
+.ham input,
+.ham::after,
+.ham::before {
+    content: "";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: whitesmoke;
+    border-radius: 20px;
+    transition: opacity var(--transition), width var(--transition), rotate var(--transition), translate var(--transition);
+    transform-origin: left center;
+}
+
+.ham input {
+    padding: 0;
+    margin-top: var(--ham-gap);
+    margin-bottom: var(--ham-gap);
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    pointer-events: none;
+}
+
+.ham input:checked {
+    width: 0;
+    opacity: 0;
+}
+
+.ham input:focus {
+    outline: none;
+}
+
+.ham:has(input:checked)::before {
+    rotate: 45deg;
+    width: var(--bar-width);
+    translate: 0 calc(var(--bar-height) / -2);
+}
+
+.ham:has(input:checked)::after {
+    rotate: -45deg;
+    width: var(--bar-width);
+    translate: 0 calc(var(--bar-height) / 2);
+}
+
+.menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #121481;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 4;
+    transition: all 0.3s ease-in-out;
+    height: 0;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    height: 50px;
+    border-bottom: 1px solid black;
+    color: whitesmoke;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu a:first-child {
+    border-top: 1px solid black;
+}
+
+.menu a:hover {
+    background-color: #350a6e;
+}
+
+#main-header {
+    padding-left: 20px;
+    box-shadow: 0px 0px 5px black;
+}
+
+#logout {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#delete_account {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.CP-Btn {
+    padding: 8px;
+    border-radius: 8px; 
+    font-weight: 700; 
+    border: none; 
+    margin-top: 10px;
+    transition: all 0.2s ease-in-out;
+    background-color: rgb(47, 173, 47);
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.CP-Btn:hover {
+    cursor: pointer;
+    rotate: 2deg;
+}
+
+@media (max-width: 720px) {
+    .right-header {
+        display: none !important;
+    }
+    .ham-menu {
+        display: flex !important;
+    }
+    .menu {
+        display: flex !important;
+    }
+}
+
+@media (max-width: 380px) {
+    #main-header {
+        padding-left: 0px;
+    }
+}
